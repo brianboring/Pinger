@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="refresh" content="1; URL=http://0.0.0.0:8000/">
+    <!-- Removed the meta refresh, we can handle that in JS -->
     <meta charset="UTF-8">
     <title>Pinger!</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1><ul>
-        <li>{{ responses[0] }}</li>
-        <li>{{ responses[1] }}</li>
-        <li>{{ responses[2] }}</li>
-        <li>{{ responses[3] }}</li>
-        <li>{{ responses[4] }}</li>
-        <li>{{ responses[5] }}</li>
-        <li>{{ responses[6] }}</li>
-        <li>{{ responses[7] }}</li>
-        <li>{{ responses[8] }}</li>
-        <li>{{ responses[9] }}</li>
-    </ul></h1>
+    <header>
+        <h1>Pinger</h1>
+    </header>
+    <main>
+        <section class="content-container">
+            <h2 class="section-title">IP Range</h2>
+            <form class="ip-range-selection-form">
+                <ul>
+                    <li>
+                        <input id="ip-range-start" type="text" placeholder="IP Range Start" tabindex="1">
+                    </li>
+                    <li>
+                        <input id="ip-range-end" type="text" placeholder="IP Range End" tabindex="2">
+                    </li>
+                    <li>
+                        <input id="ip-ping-start" type="button" value="Start" tabindex="3">
+                    </li>
+                </ul>
+            </form>
+        </section> <!-- /.ip-range-selection -->
+        <section class="content-container">
+            <h2 class="section-title">IP List</h2>
+            <ol id="ip-results-list" class="ip-results-list">
+                <li class="ip-up">Up</li>
+                <li class="ip-down">Down</li>
+                <!-- JS inserts elements here. -->
+            </ol>
+        </section> <!-- /.ip-output-container -->
+    </main>
+    <footer>
+        <small>I dunno, a copyright or a license or something.</small>
+    </footer>
 </body>
 </html>
