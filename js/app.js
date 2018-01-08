@@ -172,6 +172,7 @@ var populateIpResultsList = function(ipList) {
   }
 }
 
+// This should be the wrapper that executes all of the individual functions of your app.
 var startPingApp = function() {
   // This creates an array of all IPs to be checked including starting IP, ending IP, and all interstitial addresses
   var allIps = getAllIpsInRange()
@@ -182,10 +183,11 @@ var startPingApp = function() {
   // TODO:
   // Run through list of ips in array
   // Check the IP for up or down status
-  // Update status in HTML if necessary (add/remove HTML classes for CSS styling)
+  // Set initial status on first check (Remove untested class, add status)
   // Repeat at a set interval
+  // Update status in HTML if necessary (add/remove HTML classes for CSS styling)
   //
-  // Luxury features, possible additions:
+  // Luxury features:
   // Counter with number of times a round of pings has been successfully executed
   // Error message if all IPs are failing (network error?)
   // Individual counters for number of successfull pings and failed pings
@@ -193,7 +195,7 @@ var startPingApp = function() {
 }
 
 // Start the business.
-// This should be the wrapper that executes all of the individual functions of your app.
+// This binds the click actio to the button and starts the script.
 startButton.addEventListener('click', function(e) {
   var allIps = []
   e.preventDefault() // Makes the button do only what we want
