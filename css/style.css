@@ -1,0 +1,62 @@
+/* Document */
+body {
+  font-family:  sans-serif;
+  font-size: 16px;
+  padding:  1rem;
+}
+
+header,
+main,
+footer {
+  margin:  auto;
+  max-width: 900px;
+  width: 90%;
+}
+
+header,
+footer { text-align: center;  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-weight: 200; }
+
+/* Content structure */
+.content-container {
+  border: 1px solid rgb(175, 175, 175);
+  margin: 1rem 0;
+  padding:  1rem;
+}
+
+.section-title { margin-top: 0; }
+
+/* Shared list styles for input/output */
+.ip-range-selection-form ul,
+.ip-results-list {
+  list-style: none;
+  padding:  0;
+}
+
+  .ip-range-selection-form ul li:not(:first-of-type),
+  .ip-results-list li:not(:first-of-type) { margin-top: .75rem; }
+
+/* Range selection form */
+
+/* IP Output */
+.ip-results-list li { counter-increment: item;  }
+
+.ip-results-list li:before {
+  /* border: 1px solid rgb(175, 175, 175); */
+  border-radius: 100%;
+  content: '';
+  display: inline-block;
+  margin-right: .75rem;
+  padding: .25rem;
+  text-align: center;
+}
+
+.ip-results-list li.ip-unchecked:before { background-color: rgb( 255, 207, 5); }
+.ip-results-list li.ip-up:before { background-color: rgb(4, 128, 0); }
+.ip-results-list li.ip-down:before { background-color: rgb(184, 0, 13); }
