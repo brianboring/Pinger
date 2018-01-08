@@ -57,5 +57,6 @@ h6 { font-weight: 200; }
   text-align: center;
 }
 
+.ip-results-list li.ip-unchecked:before { background-color: rgb( 255, 207, 5); }
 .ip-results-list li.ip-up:before { background-color: rgb(4, 128, 0); }
 .ip-results-list li.ip-down:before { background-color: rgb(184, 0, 13); }
