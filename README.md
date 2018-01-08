@@ -1,2 +1,2 @@
 # Pinger
-Python webapp that pings multiple IP addresses at one time.
+A webapp that pings multiple IP addresses at one time.
